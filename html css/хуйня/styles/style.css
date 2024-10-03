@@ -1,0 +1,15 @@
+#title2{
+    border: 2px solid red;
+    width: 50px;
+    height: 100vh;
+   }
+
+   #title3{
+    border: 2px solid red;
+    width: 50px;
+    height: 100vh;
+   }
+   body
+   {
+       background-color: yellow;
+   }
