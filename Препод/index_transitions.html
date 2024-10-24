@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container__buttons{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+        .button{
+            cursor: pointer;
+            /* [ time, rule, function ] */
+            transition: 200ms all linear;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 12px;
+        }
+        .container__buttons-solid{
+            color: white;
+            background-color: blue;
+            border: 2px solid transparent;
+        }
+        .container__buttons-solid:hover{
+            background-color: #fff;
+            color: blue;
+            border: 2px solid blue;
+            transform: scale(0.8);
+        }
+        .container__buttons-outline{
+            border: 2px solid blue;
+            color: blue;
+            padding: 10px 20px;
+            border-radius: 12px;
+        }
+        .container__buttons-outline:hover{
+            border: 2px solid transparent;
+            color: white;
+            background-color: blue;
+            /* translateX(20px) translateY(6px) */
+            transform: translate(0, -6px) scale(1.2);
+        }
+        .svg-rotate{
+            width: 35px;
+            height: 35px;
+        }
+        .container__buttons-rotate{
+            background-color: cadetblue;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container__buttons-rotate:hover{
+            transform: rotate(90deg) scale(1.2);
+        }
+        .container__instance{
+            width: 75px;
+            height: 75px;
+            background-color: red;
+            /* [ time, count, function, animation-name, direction ] */
+            animation: 1s infinite linear rotation alternate-reverse;
+        }
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg) scale(1);
+                background-color: red;
+                border-radius: 0%;
+                opacity: 0;
+            }
+            50%{
+                background-color: orange;
+            }
+            100% {
+                opacity: 1;
+                border-radius: 100%;
+                background-color: purple;
+                transform: rotate(360deg) scale(2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container__buttons">
+            <div class="container__buttons-solid button">
+                Меню
+            </div>
+            <div class="container__buttons-outline button">
+                Назад
+            </div>
+            <div class="container__buttons-rotate button">
+                <svg class='svg-rotate' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M386.3 160H336c-17.7 0-32 14.3-32 32s14.3 32 32 32H464c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0s-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3s163.8-62.5 226.3 0L386.3 160z"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="container__instance">
+            animate!
+        </div>
+    </div>
+</body>
+</html>
