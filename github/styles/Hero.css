@@ -1,0 +1,41 @@
+.Hero{
+    margin-top: 150px;
+}
+.Hero__content{
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Hero__content-title{
+    font-size: 64px;
+    font-weight: bold;
+    max-width: 924px;
+    letter-spacing: -0.03em;
+}
+.Hero__content-subtitle{
+    font-size: 18px;
+    max-width: 600px;
+    margin: 20px 0 32px 0;
+    line-height: 1.5;
+}
+.Hero__content-buttons{
+    display: flex;
+    gap: 32px;
+}
+
+@media screen and (max-width:800px) {
+    .Hero__content-title{
+        font-size: 32px;
+    }
+    .Hero{
+        margin-top: 60px;
+    }
+}
+@media screen and (max-width:400px) {
+    .Hero{
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,102 @@
+.HeroCarouselControls{
+    margin: 32px 0 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeroCarouselControls__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.HeroCarouselControls__content-selector{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #484f58;
+    border-radius: 60px;
+    padding: 8px;
+    width: calc(100vw - 12px);
+    max-width: 600px;
+    position: relative;
+    overflow-x: scroll;
+}
+
+.HeroCarouselControls__content-selector:after,
+.HeroCarouselControls__content-selector:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 58px;
+    background: rgb(0,0,0);
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+}
+.HeroCarouselControls__content-selector:after{
+    right: 0;
+    transform: rotate(180deg);
+}
+.HeroCarouselControls__content-selector:before{
+    left: 0;
+}
+.HeroCarouselControls__selector-item{
+    min-width: 104px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* наследование */
+    border-radius: inherit;
+    color: #fff;
+    font-weight: 600;
+    background: transparent;
+    transition: .2s all ease-out;
+}
+.HeroCarouselControls__selector-item.active{
+    border: 2px solid #fff;
+    background: linear-gradient(
+        180deg, 
+        rgba(255, 255, 255, 0.12) 0%,
+        rgba(153, 153, 153, 0.12) 100%
+    );
+}
+.HeroCarouselControls__selector-item:hover{
+    background: linear-gradient(
+        180deg, 
+        rgba(255, 255, 255, 0.12) 0%,
+        rgba(153, 153, 153, 0.12) 100%
+    );
+}
+.HeroCarouselControls__content-subtitle{
+    width: 60%;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 24px;
+}
+.HeroCarouselControls__content-current{
+    display: flex;
+    gap: 4px;
+    width: fit-content;
+    margin: 24px 0;
+}
+.HeroCarouselControls__current-item{
+    width: 8px;
+    height: 8px;
+    background: #404651;
+    border-radius: 100%;
+}
+.HeroCarouselControls__current-item.active{
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 0.75rem;
+}
+@media screen and (min-width: 750px) {
+    .HeroCarouselControls__content-current{
+        display: none;
+    }
+}

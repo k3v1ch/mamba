@@ -1,0 +1,140 @@
+.ContentUnit{
+    background-position: 45% 40%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #0d1117;
+}
+.ContentUnit__title{
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+}
+.ContentUnit__subtitle{
+    color: rgba(255,255,255,.85);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 80px;
+}
+.ContentUnit__card{
+    padding: 64px 0 64px 24px;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    /* width: 1280px; */
+    padding: 80px 64px;
+    position: relative;
+    border: 1px solid rgba(255,255,255,.3);
+    border-bottom: none;
+    border-radius: 24px 24px 0 0;
+    backdrop-filter: blur(1px);
+    align-items: center;
+}
+.ContentUnit__card::after, 
+.ContentUnit__card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 24px 24px 0 0;
+    opacity: .5;
+    mix-blend-mode: plus-lighter;
+}
+.ContentUnit__card::after{
+    background: linear-gradient(
+        180deg, 
+        rgba(39, 50, 231, 0) 77.28%, 
+        rgba(95, 237, 131, 0.35) 123.17%
+    );
+    z-index: -1;
+}
+.ContentUnit__card::before{
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 47.42%, 
+        rgba(14, 10, 162, 0.3) 104.56%
+    );
+    z-index: 2;
+}
+.ContentUnit__card-left {
+    flex-shrink: 0;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    width: 362px;
+    z-index: 3;
+}
+.ContentUnit__card-left p{
+    color: #8b949e;
+    font-weight: 600;
+    margin-bottom: 26px;
+}
+.ContentUnit__card-left span{
+    color: #fff;
+    font-weight: 600;
+}
+.ContentUnit__card-right{
+    background-image: url(../assets/units/section-hero-visualGlow-50c1c6c84103.webp);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    padding: 8px;
+    background: rgba(255,255,255,.2);
+    border: 1px solid rgba(255,255,255,.1);
+    max-width: 560px;
+    min-width: 260px;
+}
+.ContentUnit__card-right > .main {
+    border-radius: 1.5rem;
+    width: 100%;
+}
+.ContentUnit__card-right > .glow {
+    position: absolute;
+    top: 0;
+    left: 33%;
+    z-index: -1;
+    width: 66%;
+}
+
+@media screen and (max-width: 840px) {
+    .ContentUnit__card{
+        padding: 26px 0 26px 26px;
+        gap: 24px;
+    }
+    .ContentUnit__card-right{
+        padding-right: 0;
+        border-radius: 1.5rem 0 0 1.5rem;
+        margin-right: -2px;
+    }
+    .ContentUnit__card-right > .main{
+        border-radius: 1.5rem 0 0 1.5rem;
+    }
+    p{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .ContentUnit__card{
+        flex-wrap: wrap;
+    }
+    .ContentUnit__card-left{
+        order: 2;
+        width: 100%;
+        padding: 10px;
+    }
+    .ContentUnit__card-right{
+        order: 1;
+        max-width: unset;
+        min-width: unset;
+        width: 100%;
+        margin: 30px 0 0 10px;
+    }
+}

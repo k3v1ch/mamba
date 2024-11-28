@@ -1,0 +1,37 @@
+body {
+    color: #8b949e;
+    background-color: #0d1117;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MonaSans';
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'MonaSans';
+    src: url(../assets/fonts/MonaSans-Light.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'MonaSans';
+    src: url(../assets/fonts/MonaSans-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'MonaSans';
+    src: url(../assets/fonts/MonaSans-Medium.ttf);
+    font-weight: 450;
+}
+@font-face {
+    font-family: 'MonaSans';
+    src: url(../assets/fonts/MonaSans-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'MonaSans';
+    src: url(../assets/fonts/MonaSans-Bold.ttf);
+    font-weight: 800;
+}
