@@ -1,10 +1,10 @@
 import random
 
 print("Отгадай число, будет сгенирировано число от 1 - 100.")
-print("У тебя 5 попыток, Удачи!")
+print("У тебя 10 попыток, Удачи!")
 
 random_number = random.randint(1,100)
-attempts = 5
+attempts = 10
 
 
 while attempts > 0:
@@ -40,3 +40,4 @@ while attempts > 0:
     
     if attempts == 0:
         print("Ты проиграл, попробуй еще раз!")
+        print(f"Загадоное число было:{random_number}")
