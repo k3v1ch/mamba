@@ -32,7 +32,7 @@ while attempts > 0:
         print(f"У тебя осталось: {attempts} попытки!")
         print(" ")
         print("----------------------")
-    
+
     if guess_number == random_number:
         print(" ")
         print("Ты победил")
