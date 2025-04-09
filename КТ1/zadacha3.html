@@ -8,21 +8,23 @@
 </head>
 <body>
     <script>
-        let a = 10   
-        let b = 2
-        let sign = ""
+let a = 10;
+let b = 2;
+let sign = "/";
 
-        if(sign = "+"){
-            console.log(a + b)
-        }else if(sign = "-"){
-            console.log(a - b)
-        }else if(sign = "*"){
-            console.log(a * b)
-        }else if (sign="/"){
-            console.log(a / 2)
-        }else if(sign="/" , a = 0 , b= 0 ){
-            console.log("На ноль делить нельзя")
-        }
+if (sign === "+") {
+    console.log(a + b);
+} else if (sign === "-") {
+    console.log(a - b);
+} else if (sign === "*") {
+    console.log(a * b);
+} else if (sign === "/") {
+    if (b === 0) {
+        console.log("На ноль делить нельзя");
+    } else {
+        console.log(a / b); 
+    }
+}
     </script>
 </body>
 </html>
