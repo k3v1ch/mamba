@@ -1,5 +1,5 @@
 import os
-os.chdir('python/КТ2 py')
+os.chdir('python\KT_two')
 FILENAME = 'user_notes.txt'
 
 # Убедимся, что файл существует

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function iIstFridayToday() {
+    const today = new Date();
+    const day = today.getDay(); // В JS: 0 - воскресенье, 5 - пятница
+    const friday = 5;
+
+    if (day === friday) {
+        console.log("Сегодня пятница!");
+    } else if ((day + 1) % 7 === friday) {
+        console.log("Завтра пятница!");
+    } else if ((day - 1 + 7) % 7 === friday) {
+        console.log("Пятница была вчера");
+    } else {
+        let daysToFriday = (friday - day + 7) % 7;
+        let suffix = daysToFriday === 1 ? "день" : (daysToFriday >= 2 && daysToFriday <= 4 ? "дня" : "дней");
+        console.log(`Пятница будет через ${daysToFriday} ${suffix}`);
+    }
+}
+
+iIstFridayToday();
+
+    </script>
+</body>
+</html>

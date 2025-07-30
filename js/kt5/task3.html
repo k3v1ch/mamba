@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getInfo(prices) {
+    let countStart = 0;
+    let countEnd = 0;
+    prices.forEach(p => {
+        if (p.startsWith('Цена')) countStart++;
+        if (p.endsWith('$')) countEnd++;
+    });
+    return [countStart, countEnd];
+}
+
+let prices = [ 
+    'Цена товара - 1200$', 
+    'Стоимость - 500$', 
+    'Цена не определена', 
+    '9999',
+    'Ценовая категория - больше 300$',
+    'Цена за услугу 500 EUR',
+    '150$',
+];
+
+console.log('Задача №3:', getInfo(prices));
+
+    </script>
+</body>
+</html>
