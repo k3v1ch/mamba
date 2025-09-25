@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -18,7 +17,8 @@ public class Main {
             double w = sc.nextDouble();
             System.out.println("Введите высоту");
             double h = sc.nextDouble();
+            shape = new Rectangle(w,h);
         }
-        System.out.println("Площадб выбранной фигуры:"+ shape.area() );
+        System.out.println("Площадб выбранной фигуры:"+ shape.area());
     }
 }
